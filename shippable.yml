@@ -8,7 +8,7 @@ before_script:
   - mkdir -p shippable/testresults
 
 script:
-  - phpunit  --log-junit --junit-file=shippable/testresults/phpunit.xml tests/calculator_test.php
+  - phpunit  --log-junit shippable/testresults/junit.xml tests/calculator_test.php
  # - phpunit tests/calculator_test.php --coverage-xml assets/coverage-report
   
   - phpunit tests/calculator_test.php --coverage-xml -o shippable/codecoverage/coverage.xml  
