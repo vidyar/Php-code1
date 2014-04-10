@@ -11,7 +11,7 @@ script:
   - phpunit tests/calculator_test.php --log-junit --junit-file=shippable/testresults/phpunit.xml
  # - phpunit tests/calculator_test.php --coverage-xml assets/coverage-report
   
-  - phpunit tests/calculator_test.php --coverage-xml  calculator_test.php
+  - phpunit tests/calculator_test.php --coverage-xml -o shippable/codecoverage/coverage.xml  calculator_test.php
   
 notifications:
    email: false
